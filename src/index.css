@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+.app {
+  display: flex;
+}
+
+.map {
+  width: 75vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sidebar {
+  background-color: rgb(61, 61, 61);
+  width: 25vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 1275px) {
+  html {
+    font-size: 55%;
+  }
+  .sidebar {
+    width: 30vw;
+  }
+  .map {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .app {
+    flex-direction: column-reverse;
+  }
+  html {
+    font-size: 45%;
+  }
+  .sidebar {
+    position: static;
+    height: min-content;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 60vh;
+  }
+  .map {
+    width: 100vw;
+    height: 80vh;
+    position: static;
+  }
+}
+
+.sidebar p {
+  width: 70%;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 4rem;
+  width: 70%;
+  line-height: 1;
+  margin: 2rem 0 2rem 15%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 3rem auto;
+}
+select {
+  height: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  background-color: rgb(114, 114, 114);
+  color: white;
+}
+option {
+  height: 4rem;
+}
+label {
+  font-size: 1.5rem;
+}
+.credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .credits {
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.nasa-logo {
+  height: 20rem;
+}
+.location-marker-8 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: rgb(253, 70, 46);
+}
+.location-marker-8:hover {
+  background-color: rgb(255, 107, 88);
+  cursor: pointer;
+}
+
+.location-marker-15 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: rgb(29, 157, 216);
+}
+.location-marker-15:hover {
+  background-color: rgb(34, 172, 236);
+  cursor: pointer;
+}
+
+.location-marker-12 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: rgb(59, 59, 59);
+}
+
+.location-marker-12:hover {
+  background-color: rgb(70, 70, 70);
+  cursor: pointer;
+}
+.info-box {
+  height: min-content;
+  width: 40rem;
+  background-color: rgb(61, 61, 61);
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: 3rem;
+  left: 30vw;
+}
+
+@media only screen and (max-width: 1275px) {
+  .info-box {
+    left: 50vw;
+    transform: translateX(-30%);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .info-box {
+    left: 50vw;
+    transform: translateX(-50%);
+  }
+}
+.info-box h2 {
+  font-size: 3rem;
+  padding: 1rem 2rem;
+}
+.info-box p {
+  font-size: 1.6rem;
+  padding: 0 1rem 1rem 2rem;
+}
+
+.more-info {
+  margin: 1.5rem;
+  font-size: 1.6rem;
+  color: white;
+  float: right;
+}
+.more-info:hover {
+  color: steelblue;
+}
+.active-marker {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: rgb(243, 255, 132);
+}
+.active-marker:hover {
+  background-color: rgb(236, 229, 34);
+  cursor: pointer;
+}
