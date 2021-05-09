@@ -3,11 +3,13 @@ import GoogleMapReact from 'google-map-react';
 
 import '../index.css';
 
+const API_KEY = process.env.API_SECRET;
+
 const Map = ({ center, zoom, markers }) => {
   return (
     <div className="map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyCOTsWzfsp-8LoAHN-86Z59ewAuGS5re-Y' }}
+        bootstrapURLKeys={{ key: API_KEY }}
         defaultCenter={center}
         defaultZoom={zoom}
       >
